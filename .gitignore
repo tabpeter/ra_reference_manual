@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+mov/*
+_book/mov/*
+*.mov
+*.DS_Store
+_book/
+_bookdown_files/
+_*/
