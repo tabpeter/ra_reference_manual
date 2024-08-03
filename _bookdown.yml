@@ -1,0 +1,6 @@
+book_filename: "ra_reference_manual"
+delete_merged_files: true
+output_dir: "docs"
+language:
+  ui:
+    chapter_name: "Chapter "
