@@ -2,89 +2,41 @@
 
 This chapter covers several aspects of professionalism that arise in the context of collaborative research, including: 
 
-- Data management 
+- Communication 
 
-- Communication & handling disagreement 
+- Handling disagreement 
 
 - Maintaining a CV 
 
-- Responding to reviewers
+- Responding to reviewers during the publication process
 
 Each of these sections is written to be independent of the others, so skip around to what you need. 
 
-## Data management
-
-Many graduate research assistants have data management responsibilities in addition to data analysis. [Oracle](https://www.oracle.com/database/what-is-data-management/) defines data management as the "...practice of collecting, keeping, and using data securely, efficiently, and cost-effectively." Based on [these notes from the University of Mass.](https://people.umass.edu/biostat690c/pdf/1.%20%20Principles%20of%20Data%20Management%202020.pdf), here are the general components of data management: 
-
-  1. Write a data management plan 
-  
-  2. Specify a explicit set of operating procedures 
-  
-  3. Create a data dictionary 
-  
-  4. Determine a data storage location 
-  
-  5. Develop an analysis plan 
-  
-  6. Archive all of your procedures 
-  
-  
-I expand on each of these items below: 
-
-
-### Write a data management plan
-
-As soon as you receive a new project, you should establish your organization system (refer back to \@ref(organization)). After this, your next step should be to spend some time contemplating a data management plan. This plan should describe how you will keep track of all of the data so that you can explain each step of your analysis process. 
-
-If collected data comes to you (especially if it comes via an Excel spreadsheet), you should immediately make a copy of this data. **You should never edit the original data you receive** - do not do any data cleaning or re-formatting. Instead, do all of your work on the copy, so that you can always refer back to the original data. 
-
-If you are planning a study with yet-to-be- collected data, spend some time thinking about how the data will get to you.
-
-  - Will the data come from electronic records? If so, save the SQL query/other code used to extract the records. 
-  
-  - Will the data come from a chart review (e.g., a doctor will manually collect data from patient records)? If so, I recommend making a template for the doctor (or whoever is doing the chart review) to fill in. 
-  
-  - Think about each person who will interact with the data, and have a flow-chart in your mind that traces exactly how this data will come to you. This will help you when you write the "Methods" section of your paper/poster, and will keep you from making mistakes in your analysis downstream. 
-
-### Specify a explicit set of operating procedures
-
-If you are in a situation where multiple people will handle the data (as in the chart review scenario), you should go beyond 'having a flow chart in your mind' -- in cases like these, write down who will do what with the data at each step of data collection. Send this written document to everyone on the team, and make sure everyone agrees/is on the same page.
-
-If you are in the chart review scenario, instruct the person doing chart review on how to collect data that is in a consistent form. Remember that the computer will recognize these responses as four different values: "Yes", "yes", "y", ✅. 
-
-### Create a data dictionary
-
-Create a spreadsheet with all the variables in the study listed in one column, and their definitions listed in the next column. As you write your scripts for analysis, you may even want to add a third column that lists the name you used in the script for that variable. [The US Dept. of Agriculture](https://data.nal.usda.gov/manually-creating-data-dictionary) offers some best practices on organizing a data dictionary. 
-
-### Determine a data storage location
-
-Where you keep your data matters. This is of particular importance when working with data protected by HIPPA (e.g., health records data). As a general principle, don't store data on your personal computer. Store it either online (e.g., a secure OneDrive folder, a GoogleDrive folder, an AWS location) or in an external drive (e.g., a company or university-owned secure shared drive). 
-
-### Develop an analysis plan
-
-At the outset of a project, outline the data analysis tools you think you will use based on the kind of data you expect to receive. Begin with the end in mind. Ask your collaborators these questions:
-
-  1. What is your research question? 
-
-  2. What kind of interpretations/generalizations you want to be able to make at the end of the project?  
-
-### Archive all of your procedures
-
-Document what you have done for data cleaning and analysis. This documentation can include: 
-
-  1. Well-organized, well-commented code (well-commented does not necessarily mean more comments; in fact [comments should not explain what the code is doing](https://visualstudiomagazine.com/articles/2013/07/26/why-commenting-code-is-still-bad.aspx)). 
-  
-  2. Stick to your file structure; file names themselves can track what you have done. 
-  
-  3. Save a copy of every file you send out for others to read. Even as you update versions of a report, save one copy of each version you have shared. 
-
-## Communication and disagreement
-
-Here are some tricky situations that may arise when working in a GRA position, along with some suggestions on how to handle them. 
+## Communication 
 
 ### Speaking in the affirmative 
 
 I have learned that collaboration benefits from speaking in the affirmative tense -- that is, speaking from the perspective of what you *can do*, *will do*, *do know/are learning*, and *are working on*. I've noticed that the pervasive mindset among graduate students is to complain, a habit which manifests itself in speaking in terms of what one can't do, won't do, don't know, don't have time for, etc. Change that narrative. You are not a victim. Moreover, you will be more pleasant to work with if you are positive. Whenever you are communicating with a collaborator (or PI, for that matter), frame your questions and comments in the affirmative. If you don't know the answer, describe what you will do to work with them towards their goal instead of enumerating the challenges in the way. 
+
+### Responding to emails 
+
+I've give these in bullets: 
+
+- Respond to all work-related emails in 1-2 business days. If you are out of office, turn on automatic replies. 
+
+- Start your emails with a greeting, and end with an appropriate closing. Use spell check. 
+
+- If you are emailing a student/resident, always CC their advisor/mentor/PI. 
+
+- If you are asking a series of questions, use bullet points -- this makes your question easier to read. 
+
+- If you are responding to a series of questions, copy the text from the email with the questions and write your responses directly below, using a highlight or text color to make your answer stand out. This anchors your responses to the question, keeping the conversation in context. 
+
+- If you are meeting with a group for the first time, have a conversation (either in-person or virtually) as an entire group. In my experience, collaborative projects that take place entirely via email exchange are prone to lapses in communication. 
+
+## Handling disagreement
+
+Here are some tricky situations that may arise when working in a GRA position, along with some suggestions on how to handle them. 
 
 ### The data is not organized in a way that is conducive to analysis 
 
@@ -127,7 +79,6 @@ If you find yourself in the unpleasant situation where a faculty member sends an
 ## Maintaining a CV
 
 A curriculum vitae (CV) is not something you do once. It is something that requires constant maintenance. The tool I've found helpful for both 1) maintaining a CV that both looks professional and 2) is simple to update is the [vitae](https://pkg.mitchelloharawild.com/vitae/) package. The package site has a detailed README file with links to videos on how to set this up. I try to update my CV each time another publication is released. 
-
 
 ## Responding to reviewers {#point-to-point}
 
