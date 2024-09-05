@@ -1,15 +1,13 @@
 # Your computing setup 
 
-
 Your computing setup is an essential part of working as a biostats GRA. It is like organizing a toolbox - you have to choose the tools to work with, invest in those tools, decide how to organize/store them, and then (of course) actually work with them. 
 
-Developing a 'toolbox' for quantitative work can have a lot of overhead -- a steep learning curve -- because systems for working in a computational/quantitative space are highly customizable. There are lots of ways to do things -- and in may cases, there are multiple ways to do something well. The sheer number of options can make it hard to know where to start. So, that is the objective of this chapter. For each of the components of my current toolbox, I am sharing *one* way to begin. My goal is to help you get started, trusting that you will gradually customize your setup as you learn more.
+Developing a 'toolbox' for quantitative work can have a lot of overhead -- a steep learning curve -- because systems for working in a computational/quantitative space are highly customizable. There are lots of ways to do things -- and in may cases, there are multiple ways to do something well. The sheer number of options can make it hard to know where to start. So, the objective of this chapter is to offer a place to begin. For each of the components of my current toolbox, I am sharing *one* way to begin. My goal is to help you get started, trusting that you will gradually customize your setup to best suit your needs.
 
-I am writing as if I was writing to who I was 5 years ago -- a **total** novice. If that's not you, feel free to skip around -- I've tried to name the subheadings so that you can grab and go based on what you need from this chapter. 
+I am writing as if I was writing to who I was 5 years ago -- a **total** novice. If that's not you, feel free to skip around -- the subheadings in this chapter are labeled so that you can grab and go based on what you need from this chapter. 
 
 
 ## Setting up R and RStudio (now Posit)
-
 
 ### Download and install R 
 The tools I use the most are `R`/RStudio - in addition doing statistical analysis, I also use these tools to write documents (like this book!) and create graphics for publications. 
@@ -69,7 +67,7 @@ When you download a package, the package is saved in location that is specified 
 
   1.  In the Environment pane, there is an icon to 'save workspace as...' - **you should never save your R environment and/or your R workspace**. This is bad practice for a number of reasons, including that you do not have control of what is being saved. Better alternative: save only the object(s) you need using `saveRDS()`. You can always re-access these later with `readRDS()`. 
   
-  2. Going back to the comment on file paths in the organization chapter (CROSS REF), there is a function in `R` called `setwd()` where you can tell the computer where (what folder) to point. When writing a script, **the first line of your script should never be** `setwd("a/directory/that/only/I/have)` -- you want your code to be [portable](https://www.techtarget.com/searchstorage/definition/portability#:~:text=Source%20code%20portability%20refers%20to,or%20data%20center%20to%20another.), so that other people can run it (and so that you can run it even after you have reorganized your folders!). Better alternative: use relative file paths, like the structure provided in the super handy [here R package](https://here.r-lib.org/). 
+  2. Going back to the comment on file paths in the [organization chapter](#organization), there is a function in `R` called `setwd()` where you can tell the computer where (what folder) to point. When writing a script, **the first line of your script should never be** `setwd("a/directory/that/only/I/have)` -- you want your code to be [portable](https://www.techtarget.com/searchstorage/definition/portability#:~:text=Source%20code%20portability%20refers%20to,or%20data%20center%20to%20another.), so that other people can run it (and so that you can run it even after you have reorganized your folders!). Better alternative: use relative file paths, like the structure provided in the super handy [here R package](https://here.r-lib.org/). 
   
 ### Cool keyboard shortcuts in R/RStudio 
 
@@ -81,10 +79,18 @@ When you download a package, the package is saved in location that is specified 
 
 ## Setting up your terminal (i.e., the command line)
 
-There are two ways to interact with your computer: via 'point and click' interfaces (e.g., File Explorer, Finder) and via the **command line**. The command line is much more efficient for many computational tasks -- I encourage anyone working in biostatistics to begin learning to use the command line for creating/moving/manipulating files, as this will be good preparation for doing more complicated work (e.g., writing your own `R` packages and so on).
+There are two ways to interact with your computer: via 'point and click' interfaces (e.g., File Explorer on Windows, Finder on macOS) and via the **command line**. The command line is much more efficient for many computational tasks -- I encourage anyone working in biostatistics to begin learning to use the command line for creating/moving/manipulating files, as this will be good preparation for doing more complicated work (e.g., writing your own `R` packages and so on).
 
-On a Mac, you can open the command line by searching for the **'Terminal'** app (this is installed on every Mac by default). On Windows, the analog is called **'Command Prompt.'** You have a lot of choices in addition to the apps that are on your computer by default. I use the app [iTerm2](https://iterm2.com/), and I customized the appearance of my terminal window with [Oh My ZSH](https://ohmyz.sh/). 
+### Mac 
+On a Mac, you can open the command line by searching for the **'Terminal'** app (this is installed on every Mac by default). You have a lot of choices in addition to the apps that are on your computer by default. I use the app [iTerm2](https://iterm2.com/), and I customized the appearance of my terminal window with [Oh My ZSH](https://ohmyz.sh/) framework. 
 
+### Linux (Ubuntu, Debian, etc.)
+If you are using an Ubuntu system, your command line app is also **'Terminal'**. In Linux systems, you are probably running `bash`, and the [Oh My BASH](https://github.com/ohmybash/oh-my-bash) framework can help you customize your terminal. 
+
+### Windows
+If you are on Windows, you will probably want to consider [installing Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). The Windows command line too is called 'Command Prompt', but this is not compatible with most applications outside the Windows/Office 365 suite.  
+
+## A few tips to get started
 As a first step in learning to work with the command line, try to find your files -- in the video below, I show how I do this with [symbolic links ('symlinks')](https://www.freecodecamp.org/news/linux-ln-how-to-create-a-symbolic-link-in-linux-example-bash-command/). 
 
 [Here](https://youtu.be/f-xsKZVWavo) is a quick video of me doing this. 
@@ -102,10 +108,9 @@ More details on working with the command line are explained in the [online cours
   - [Quick-start guide to the VIM text editor](https://eastmanreference.com/a-quick-start-guide-for-beginners-to-the-vim-text-editor) -- VIM is a popular choice for text editing (other kinds of text editors are TextEdit (ships with Mac), NotePad/NotePad ++ (Windows))
 
 
-
 ## Getting started with Git
 
-[Git](https://git-scm.com/) is a free and open source tool for [version control](https://en.wikipedia.org/wiki/Version_control). What this means is that Git allows you to avoid the problems that arise when you try to work with multiple copies of code for a project. Have you ever had a folder with files like this: `analysis1.R`, `04-05-2023_analysis.R`, `old_analysis.R`, `final_version.R`, and `final_final_version.R`?  This way of working is not only inefficient, but also inhibits collaboration and makes your work harder to reproduce. None of that is good for science. So, Git offers a way to manage versions, so that you can keep track of the current version of your code and have access to looking back at older versions.
+[Git](https://git-scm.com/) is a free and open source command-line tool for [version control](https://en.wikipedia.org/wiki/Version_control). What this means is that Git allows you to avoid the problems that arise when you try to work with multiple copies of code for a project. Have you ever had a folder with files like this: `analysis1.R`, `04-05-2023_analysis.R`, `old_analysis.R`, `final_version.R`, and `final_final_version.R`?  This way of working is not only inefficient, but also inhibits collaboration and makes your work harder to reproduce. None of that is good for science. So, Git offers a way to manage versions, so that you can keep track of the current version of your code and have access to looking back at older versions.
 
 There are a lot of online tutorials to get you started with Git -- just Google 'git tutorial for beginners' and several free options will show up. Again, the [missing semester of your CS education](https://missing.csail.mit.edu/2020/version-control/) course has a whole section on learning version control -- highly recommend. 
 
@@ -115,13 +120,13 @@ Here is a brief overview of a few major vocab words you need to know to use Git 
   
   - **local** versus **remote** (adjectives): These terms describe the location of a repo. A local repo exists only on one computer - for instance, a project that I have created on my laptop is a local repo. A remote repo is hosted online (probably on [GitHub](https://github.com/)). Sort of like keeping files in OneDrive or GoogleDrive, remote repositories make it possible for multiple people to access a project from any computer.  
   
-  - **clone** (verb): The action of making a copy of a repo; e.g., "I will clone Person A's remote repo onto my laptop." The command line code for this is `git clone <repo>` 
+  - **clone** (verb): The action of making a copy of a repo. Example: "I will clone Person A's remote repo onto my laptop." The command line code for this is `git clone <repo>` 
   
   - **pull** (verb): The action of incorporating all of the changes from a remote repo into a local repo. Example: "My local copy of Repo A is out of sync with the master copy, since Person B made some more changes to our code yesterday. I need to pull those changes from our remote repo into my local repo." Pulling is done with `git pull`.
   
   - **stage** (verb): The action of preparing changes for a commit. This is like looking at your scratch work and deciding which of your ideas you want to keep. This is done with `git add <edited files to keep>`.  
   
-  - **commit** (noun or verb): A commit (the noun) refers to a documented change to one or more files in a project. To make a commit (verb) is the action of saving a change. In broad, general terms, Git keeps a timeline of all the changes in a project. Once something is committed in Git, the changes that were part of that commit are permanently saved in the project timeline. To make a commit, use `git commit -m "a message describing the changes made"`
+  - **commit** (noun or verb): A commit (the noun) refers to a documented change to one or more files in a project. To make a commit (verb) is the action of saving a change. In broad, general terms, Git keeps a timeline of all the changes in a project. Once something is committed in Git, the changes that were part of that commit are permanently saved in the project timeline. To make a commit, use `git commit -m "a message describing the changes made"`. 
   
   - **push** (verb): The action of moving commits you made in your local copy of the repo to the remote copy of the repo. Example: Me and my colleague Y are working on project A together. The master copy of project A is in our remote repo; me and Y have each cloned this repo, so we have local copies on our respective laptops. I have committed some changes in the files on my local copy, so now I need to *push* my commits to the remote repo. After I push, Y will be able to see what I did." 
   
@@ -136,28 +141,39 @@ Here is a brief overview of a few major vocab words you need to know to use Git 
 
 ## Using high performance computing clusters 
 
-In many contemporary applications, the computational work for data analysis needs to be done in a high performance computing cluster. At the University of Iowa, our high performance computing cluster is called [Argon](https://wiki.uiowa.edu/display/hpcdocs/Argon+Cluster). My appreciation for Argon grows the more I work on my dissertation. One resources I have found super helpful in working with high performance computing clusters is the  [online tutorial](https://iowabiostat.github.io/hpc/index.html) written by Profs. [Patrick Breheny](https://myweb.uiowa.edu/pbreheny/) and [Grant Brown](http://grantbrown.github.io/). This tutorial outlines how to use the UI Argon cluster. Much of what is here would generalize to other HPC systems as well. 
+In many contemporary applications, the computational work for data analysis needs to be done in a high performance computing cluster. At the University of Iowa, our high performance computing cluster is called [Argon](https://wiki.uiowa.edu/display/hpcdocs/Argon+Cluster). One resources I have found super helpful in working with high performance computing clusters is the  [online tutorial](https://iowabiostat.github.io/hpc/index.html) written by Profs. [Patrick Breheny](https://myweb.uiowa.edu/pbreheny/) and [Grant Brown](http://grantbrown.github.io/). This tutorial outlines how to use the UI Argon cluster. Much of what is here would generalize to other HPC systems as well. 
 
 ### Interactive sessions v. submitting jobs 
 
-There are two ways to interact with a high performance computing cluster: an *interactive session* and a *job submission*. An interactive session involves you logging into the computer and telling it what to do one step at a time, whereas a job submission means you give the computer a whole set of instructions at once. In an interactive session, you stay logged in and watch the screen for results as they come in. In a job submission, you send you instructions (via a *script*) to the computer and then you are free to log out -- the job will run until it either hits and error or finishes the job, and it will notify you in either case (for Argon, you get an email when your job is finished running). From here, you can see that jobs which you expect to take more than a couple of hours should be done via job submission. 
-
+There are two ways to interact with a high performance computing cluster: an *interactive session* and a *job submission*. An interactive session involves you logging into the computer and telling it what to do one step at a time, whereas a job submission means you give the computer a whole set of instructions at once. In an interactive session, you stay logged in and watch the screen for results as they come in. In a job submission, you send you instructions (via a *script*) to the computer and then you are free to log out -- the job will run until it either hits and error or finishes the job, and it will notify you in either case (for Argon, you get an email when your job is finished running). From here, you can see that jobs which you expect to take a while should be done via job submission. 
 
 ### Writing your first bash script 
 
 For submitting jobs to a computing cluster, you will need to write a *script* -- the set of instructions for the computer. [Here](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-writing-a-simple-bash-script) is a tutorial for how to write a simple `bash` script -- this is a great place to start if you are new to script writing. 
 
-### Conda environments v. module configurations
+### Conda environments, module configurations, and containers
 
-  When it comes to using version-specific programs (this comes up a lot when working with `Python`), you will need to change the version of a tool that your computer is 'pointing at' depending on the work you are doing. Example: to use the [LDSC](https://github.com/bulik/ldsc/wiki/Heritability-and-Genetic-Correlation) command line tool for genetic correlation analysis, you need Python version 2.7 -- but Python 3.10 is the most updated release of Python. In such a scenario, you need to tell your computer which version of Python to use. Moreover, you want to create a 'setup' for working with a tool like LDSC, and then every time you need to use this tool, you tell you computer: "load this special configuration of software" and it 'remembers' what configuration that is. Saving a configuration in this way can be done with either `conda` environments or `module` configurations. [Conda](https://docs.conda.io/en/latest/) is a package management system that you can download for your computer and then use the command `conda` to *create custom environments*. Alternatively, some computer systems (like the UI Argon HPC) have pre-installed capability to *configure custom modules*. One thing that gave me issues early on in my dissertation work is that I was trying to create a `conda` environment inside of my module configuration. **Don't mix and match the two approaches** -- choose to either create environments or configure modules, and stick with you choice. Your choice here will depend in large part to the type of computer system you are working with, e.g., on UI Argon, it is much simpler to configure modules because that is already pre-installed and set to the default. Checkout the [program files and modules](https://iowabiostat.github.io/hpc/3.html) section of the HPC tutorial for an example of this syntax. 
+This section will probably be most helpful for dissertation students or those working on advanced projects. If that's not you yet, I'd encourage you to skip this for now. 
+
+Conda, modules, and containers are all subjects where you could do a deep dive -- here's a few brief notes. 
+
+**Main point**: When it comes to writing programs for data analysis, you will need to have a 'setup' of software on which your program depends. The software on which your work depends are called *dependencies*, and these dependencies have versions. A programmer needs to have a way to create a system of all the dependencies that the code needs, using all the right versions. This kind of system can be challenging to orchestrate. Conda, module configurations, and containers all offer solutions to these challenges. 
+  
+  This issue of versions/dependencies comes up a lot when working with `Python`. Example: to use the [LDSC](https://github.com/bulik/ldsc/wiki/Heritability-and-Genetic-Correlation) command line tool for genetic correlation analysis, you need Python version 2.7 -- but Python 3.10 is the most updated release of Python. In such a scenario, you need to tell your computer which version of Python to use. Moreover, you want to create a 'setup' for working with a tool like LDSC, and then every time you need to use this tool, you tell you computer: "load this special configuration of software" and it 'remembers' what configuration that is. Saving a configuration in this way can be done with either `conda` environments or `module` configurations. [Conda](https://docs.conda.io/en/latest/) is a package management system that you can download for your computer and then use the command `conda` to *create custom environments*. Alternatively, some computer systems (like the UI Argon HPC) have pre-installed capability to *configure custom modules*. One thing that gave me issues early on in my dissertation work is that I was trying to create a `conda` environment inside of my module configuration. **Don't mix and match the two approaches** -- choose to either create environments or configure modules, and stick with you choice. Your choice here will depend in large part to the type of computer system you are working with, e.g., on UI Argon, it is much simpler to configure modules because that is already pre-installed and set to the default. Checkout the [program files and modules](https://iowabiostat.github.io/hpc/3.html) section of the HPC tutorial for an example of this syntax. 
+  
+  Yet a third solution to this issue of dependencies and versions is **containerization**. This is what I used in my dissertation -- my dissertation required the installation of several C++/R packages, my own R package in its development version, and R >= 4.4.1. Trying to set all of that up with a module configuration proved to be quite challenging -- among other issues, the modules available did not have the most recent version of R. As a solution, I created a container with `podman` (a Linux package), converted this podman container into an apptainer, and then copied the image file of my apptainer onto the high-performance computing platform. 
+  
+The best 5 minute beginner-level YouTube video I've found explaning containerization is [here](https://www.youtube.com/watch?v=pR-cGS6IGvI). 
+
+Instructions for how to implement the podman -> apptainer workflow are available [here](https://github.com/IowaBiostat/hpc-apptainer) (courtesy of Grant Brown). 
 
 ## Advanced R and some Julia
 
-Just for reference, here are some links I have found helpful for learning more advaned R and some Julia -- special thanks again to Grant Brown for touching on these ideas in his course on Advanced Computing: 
+Just for reference, here are some links I have found helpful for learning more advanced R and some Julia -- special thanks again to Grant Brown for touching on these ideas in his course on Advanced Computing: 
   
   - [Advanced R, 2nd edition](https://adv-r.hadley.nz/) -- again, well-divided into sections, so its simple to navigate 
   
   - [Efficient R programming](https://bookdown.org/csgillespie/efficientR/programming.html) -- this is really great for people who are learning R with more of a math/stats background than a computing background. Regarding tips for writing better R code, **there are some real gems here**. 
   
-  - [Free course in Julia](https://juliaacademy.com/p/intro-to-julia) -- yes, it really is free. 
+  - [Free course in Julia](https://juliaacademy.com/p/intro-to-julia). 
 

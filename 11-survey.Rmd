@@ -1,8 +1,8 @@
 # Survey data analysis 
 
-## Tools for analyzing survey data
+The [survey R package](https://cran.r-project.org/web/packages/survey/index.html) is the classic tool for this type of analysis. This package has [extensive documentation](https://r-survey.r-forge.r-project.org/survey/). The author of the package has posted [publicly available notes from a JSM workshop](https://faculty.washington.edu/tlumley/survey-jsm-nup.pdf) that includes more theoretical foundations.  
 
-  - The [survey R package](https://cran.r-project.org/web/packages/survey/index.html) is the classic tool for this type of analysis. 
-
-  - The [srvyr R package](https://cran.r-project.org/web/packages/srvyr/vignettes/srvyr-vs-survey.html) offers `tidyverse` syntax of the `survey` package functions 
+The [srvyr R package](https://cran.r-project.org/web/packages/srvyr/vignettes/srvyr-vs-survey.html) offers `tidyverse` syntax of the `survey` package functions 
   
+A more extensive list of survey analysis tools is compiled [here](https://www.hcp.med.harvard.edu/statistics/survey-soft/). 
+

@@ -1,27 +1,37 @@
-# Genetics (GWAS) data analysis 
+# Genome-wide association (GWAS) data  
 
-The rate at which new tools for GWAS data analysis are created is mind-boggling. It seems like a new paper in this area comes out each week -- which makes it a challenge to summarize the tools available for working in this area. With this in mind, consider the set of tools and tips provided here as select suggesions from my own experience rather than an exhaustive list. 
+New tools for genetic/genomic data analysis are being created at a mind-boggling rate. It seems like a new paper in this area comes out each week -- which makes it a challenge to summarize the tools available for working in this area. With this in mind, consider the set of tools and tips provided here as select suggestions from my own experience rather than an exhaustive list. 
 
-## R packages 
+A tutorial for GWAS in `R` is available [here](https://pbreheny.github.io/adv-gwas-tutorial/). 
 
-  - [bigsnpr]()
-  
-  - [snpStats]()
-  
-  - [ncvreg]()
-  
-  - [penalizedLMM]()
-  
-  - [qqman]()
+## `R` packages 
 
-  - [CMplot]()
+### for analyzing one genetic marker at a time 
+
+  - [bigsnpr](https://privefl.github.io/bigsnpr/) analyses GWAS scale data, includes PCA, fitting lasso models, doing some quality control 
   
-  - [PLACO](): this isn't a 'package' per se, but this method for assessing pleiotropy between traits is implemented in `R`. 
+   - [qqman](https://cran.r-project.org/web/packages/qqman/vignettes/qqman.html) creates Manhattan plots and QQ plots
+  
+### for analyzing markers together in an additive model
+  
+  - [ncvreg](https://github.com/pbreheny/ncvreg) fits nonconvex penalized linear mixed models in `R`
+  
+  - [plmmr](https://github.com/pbreheny/plmmr) does penalized linear mixed models in `R`
+
+### for summary-level GWAS data 
+  
+  - [PLACO](https://github.com/RayDebashree/PLACO): this isn't a 'package' per se, but this method for assessing pleiotropy between traits is implemented in `R`.
+
+## Bioconductor 
+
+  - [snpStats](https://www.bioconductor.org/packages/release/bioc/html/snpStats.html)
 
 ## Command-line tools 
 
-  - [PLINK]()
+  - [PLINK](https://www.cog-genomics.org/plink/1.9/) is arguably the most established tool for managing and analyzing genetic/genomic data. Definitely worth learning if you are interested in working with this kind of data. **This is probably the best tool to start learning if you are new to the field.**
   
-  - [LDSC]()
+  - [LDSC](https://github.com/bulik/ldsc) is a tool for estimating heritability and genetic correlation from GWAS summary statistics. 
+  
+  - [HEELS](https://github.com/huilisabrina/HEELS) does heritability estimation with high-efficiency using LD and summary statistics. 
   
   

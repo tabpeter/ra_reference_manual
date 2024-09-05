@@ -80,3 +80,9 @@ genetics-gwas-data-analysis
 r-packages
 command-line-tools
 geographic-gis-data-analysis
+motivation-tldr
+context
+u.-iowa-data-sharing-policy
+communication
+responding-to-emails
+handling-disagreement

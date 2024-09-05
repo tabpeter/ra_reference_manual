@@ -9,4 +9,4 @@
 
 TODO: add SAS procedures/documentation 
 
-TODO: see if I can get permission to post my comps exam work as an example 
+TODO: see if I can get permission to post some past analysis code as an example 

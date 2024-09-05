@@ -1,48 +1,77 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # The basics: t-tests, ANOVA, and linear regression
 
-The most basic statistical analyses for a GRA to use are t-tests, analysis of variance, and linear regression. Here are some tips and references for getting started using any of these tools: 
+The most basic statistical analyses for a GRA to use are t-tests, analysis of variance, and linear regression. Here are some tips and references for getting started and creating well-formatted output: 
 
 ## t-tests & ANOVA
 
-Many t-test and ANOVA results can be implemented by the same functions I've suggested for creating [summary tables](#tables) 
+The best R-package I have used for doing t-tests and ANOVA is [gtsummary](https://www.danieldsjoberg.com/gtsummary/), a package that makes beautiful tables for summarizing data. 
 
+Here is an example of a t-test with `gtsummary`: 
 
-### Assumptions/diagnostics 
+```{r}
+library(gtsummary)
+# lets use the ToothGrowth data
+str(ToothGrowth)
 
+# Note: I am assuming here that you have checked the appropriate diagnostics (
+#   e.g., check residuals for normality, check for outliers, check variances in both groups, etc.)
 
-### Examples: 
+tbl_summary(ToothGrowth, # data set 
+            by = "supp", # factor/grouping variable
+            include = "len", # numeric outcome 
+            label = list("len" ~ "Length"), # make a readable label 
+            # t-test is a test of means, so let's summarize data with mean (sd) form
+            statistic = list(all_continuous() ~ "{mean} ({sd})"), 
+            # choose reasonable number of digits to print 
+            digits = list(everything() ~ 2)) |> 
+  # indicate that you want a t.test 
+  add_p(test = list(all_continuous() ~ "t.test")) |> 
+  # format labels 
+  bold_labels() |> 
+  # remove default 'Characteristic' header 
+  modify_header(label = "")
+```
 
+For ANOVA, we could do this: 
 
-### R code tips 
+```{r}
+tbl_summary(ToothGrowth, 
+            by = dose, # factor/grouping variable is now 'dose' 
+            include = "len", 
+            label = list("len" ~ "Length"), 
+            statistic = list(all_continuous() ~ "{mean} ({sd})"), 
+            digits = list(everything() ~ 2)) |> 
+  # indicate that you want a one-way ANOVA test here, not assuming equal variances 
+  add_p(test = list(all_continuous() ~ "oneway.test")) |> 
+  bold_labels() |> 
+  modify_header(label = "")
+```
+
 
 ## Linear regression
 
-### Assumptions/diagnostics 
+`gtsummary` will also create summary tables for linear regression, like so: 
 
-As the [regression diagnostics page](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/R5_Correlation-Regression7.html) at Boston University explains, there are 4 key assumptions in linear regression: 
+```{r}
+# use the 'iris' data this time 
+str(iris)
+my_model <- lm(Petal.Length ~ Species + Sepal.Length, data = iris)
 
-  1. **Linearity**: the data $X$ are in a linear relationship with the mean of the outcome $\hat Y$ 
-  
-  2. **Homoskedasticity**: The variance of the residual $\sigma^2$ is the same for all observations of $X$. 
-  
-  3. **Independence**: For all observations $i$ and $j$, $i \perp j$. 
-  
-  4. **Normality**: The residuals $\textbf{r} \equiv Y - X\beta$ are distributed normally. 
+# again, I am assuming you have checked the appropriate linear model diagnostics
+tbl_regression(my_model) |> 
+  modify_header(label = "**Feature**", estimate = "**Estimate**") |> 
+  bold_labels()
+```
 
 
-When using a linear model, here are the diagnostics you should check: 
-
-  1. Check the linearity assumption: make a plot of the residuals $\textbf{r}$ versus the fitted values $\hat Y$. If this assumption holds, you should see a horizontal line without a distinct pattern. Patterns like a cone-shape or a curve are red flags. 
-  
-  2. Check the normality assumption: Make a QQ plot of the residuals using `qqnorm` and `qqline`. If the normality assumption is reasonable, the points should fall on the diagonal line drawn by `qqline`. You could also make a histogram of the residuals and see if the histogram has a bell-curve shape. 
-  
-  3. Check the heteroskedasticity assumption: Plot the standardized residuals versus the fitted values (this is a scale-location plot). You want to see no pattern here; if you notice a curved or cone-shaped pattern, that's a red flag. 
-  
-  4. Check for outliers and high leverage points: [Cooks distance](https://en.wikipedia.org/wiki/Cook%27s_distance) is a metric for identifying influential points. You can calculate this in `R` using `cooks.distance()`, which is one of several functions provided in the `stats` package for assessing influence. See `?influence.measures` for details. 
+For logistic regression, you will need to do some futher customization of the output to get the odds ratio estimates to appear in the table - take a look at [this help documentation](https://www.danieldsjoberg.com/gtsummary/articles/tbl_regression.html) for examples. 
 
 
 ### Examples: 
 
   - This article on [STHDA](http://www.sthda.com/english/articles/39-regression-model-diagnostics/161-linear-regression-assumptions-and-diagnostics-in-r-essentials/) gives some examples of residual plots in `R`. 
-
-### R code tips 

@@ -2,6 +2,16 @@
 
 A presentation is effective when everyone in the audience learns something. With that in mind, craft your presentations with the audience in mind. If you're using PowerPoint/Beamer/some other slide deck tool, use more pictures than words. As Dr. Melissa Marshall says, "Bullets kill" -- meaning too many bullet points will kill your presentation. 
 
+## Tips and ideas 
+
+- Use the title space on a slide for a short statement of the point you are making. Use the content space to add an image with a graphic or table to illustrate your point. 
+
+- Write the comments you want to make as bullet points in a sheet of **speaker notes**, not on the slides! You can even give the audience a copy of your speaker notes if you want them to follow along. 
+
+- Consider making your slides publicly available and linking them with a QR code to your opening slide. 
+
+- If you are including an equation or derivation, use colored text to mark the term or symbol that you want to highlight. 
+
 ## Tools for giving presentations 
   
   - [Melissa Marshall's resources](https://www.presentyourscience.com/resources) at Present Your Science. There's a lot here (including a TED talk) on how to use slideshows to effectively communicate to diverse audiences. 10/10, highly recommend.

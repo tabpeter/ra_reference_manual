@@ -7,16 +7,44 @@ The final product for a project is usually a report, rather than a script or a s
 
 Here are some general features of reports that tell stories: 
 
-  - Reproducibility: can you reproduce your report in one line of code? If not, this is usually a red flag. 
+  - Good reports are reproducible: is it simple to reproduce your report, such as re-knitting a single R-markdown file? If it's not easy to reproduce, this is usually a sign that something could be done better/more efficiently/more robustly. 
   
-  - Easily navigated by audience: don't send raw output to collaborators! 
+  - Good reports are easily navigated by audience: don't send raw output to collaborators! 
   
-  - Outlines context, methods, results, and limitations. You need all four to tell the truth. 
+  - Good reports tell the whole story: include the context, methods, results, and limitations of the study. Each of these components is important for telling the truth. 
   
-  - Summarizes information in graphs whenever possible. 
-  
-  
-[Here is a video](https://youtu.be/Bs6EYlw6di0) showing an example of one of my reports. 
+  - Good reports use visuals: summarizes information in tables/graphs whenever possible. 
+
+
+## Outline of a report 
+
+As a place to start, try outlining your reports in the same way that many scientific journal articles are organized: 
+
+- **Background**: Give the context of the work. In the first paragraph, make a clear statement of the objective of the work. Example: "The objective of this project is to investigate how, if at all,  ___ impacts ___." 
+
+- **Methods**: Summarize the methods you used to analyze the data. Note the software you used, and the version of that software at the time of analysis. Also state any decisions that you made about how data were interpreted. Example: 
+"We used a linear mixed model to test the effect of drug X on measurement A while accounting for the grouping structure among observations. We classified the grouping structures as __, __, and __. All analysis was done using R 4.4.1" 
+
+If you are using publicly available data, state your data source - e.g., "The 2019 version of the __ dataset was downloaded from __ site." 
+
+- **Results**: At the beginning of your results section, state the takeaways that are most important to your audience. In these statements, indicate the degree and direction of evidence. Then illustrate this with tables and graphs. Example: "We found mild evidence that drug X was associated an increase in measurement A, as shown in Figure 2." 
+
+Some phrases I have used in writing results sections: "The data suggest that ...", "The data show mild/moderate/strong evidence of ...", "Although we observed ___, the evidence of an association was weak/inconclusive." 
+
+- **Discussion**: For the statistician, the main contributions towards the discussion are (1) naming the limitations of the data analysis and (b) offering directions for future work. 
+
+Examples of how to name limitations: 
+
+"Although we chose to use/implement __, this choice assumes that ... An alternative approach could be..."
+
+"Due to __ factors, we chose to apply __ -- a limitation of this approach is ..."
+
+"We recommend readers to consider __ as part of interpreting these results." 
+
+"The evidence in this study may not generalize to __ population(s); further work should explore ..." 
+
+- **References**: Be sure to cite the methods and software you used. Including citations will also help your collaborators as they incorporate your report into the larger work (e.g., the grant, the article, etc.) If you used publicly available data, add a citation for that source as well. 
+
 
 ## Tools for writing reports {#tables}
 
@@ -24,7 +52,7 @@ Here are some general features of reports that tell stories:
 
   - [gtsummary](https://www.danieldsjoberg.com/gtsummary/) - best overall; best for displaying regression model estimates; 'prettiest' output
   
-  - [compareGroups](https://cran.r-project.org/web/packages/compareGroups/vignettes/compareGroups_vignette.html) - best bivariate testing table (shows ORs)
+  - [compareGroups](https://cran.r-project.org/web/packages/compareGroups/vignettes/compareGroups_vignette.html) - best bivariate testing table (shows ORs without custom formatting needed).
   
   - [arsenal](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html) - easiest to customize
   
@@ -36,4 +64,3 @@ Here are some general features of reports that tell stories:
   - [tutorial on LaTeX tables in PDF](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_pdf.pdf)
   
   - [tutorial on tables in HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
-

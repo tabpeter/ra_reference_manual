@@ -1,1 +1,98 @@
 # Geographic (GIS) data analysis 
+
+One really useful way to illustrate data is through making maps. Here's an example based on a real project I did in 2022 (data are available in the `data/` subfolder of this repository).
+
+Suppose that a principal investigator (PI) wants to study access to care through teledentistry. The specific research question is something like, "in a population of patients treated at my dental clinic from January 2021 - May 2023, what were the patterns in the relationships between 1) the distance traveled to the clinic, 2) the mode of the intake exam (in-person or virtual), and 3) treatment completion within 6 months (yes or no). Suppose further that I (the analyst) have access to the county in which each person lives, in addition to the clinical information relevant to our research in the electronic dental records. 
+
+Let's start by loading all the libraries we'll need: 
+
+```{r libs, message=FALSE}
+library(dplyr) # package for 'wrangling' data
+library(sf) # package for analyzing GIS data 
+library(ggplot2) # package for drawing plots/graphs
+library(viridis) # package for choosing good color palettes 
+library(knitr) # package for making tables
+```
+
+After loading libraries, the first thing I would do is look online to find [publicly available data](https://geodata.iowa.gov/datasets/iowa::iowa-county-boundaries/explore?location=42.011193%2C-93.543500%2C8.00) with [Federal Information Processing Standard (FIPS) codes](https://en.wikipedia.org/wiki/FIPS_county_code) for Iowa at the county level. I will use the R package `sf` to handle GIS data, which often comes in `.shp` or `GeoJSON` formats. Data in these sorts of files have what we need to draw a map of Iowa with the counties demarcated on the map. 
+
+```{r}
+# read in GeoJSO file 
+ia <- st_read("data/Iowa_County_Boundaries.geojson")
+# must create a 'geometry' object 
+ia_geom <- st_geometry(ia)
+
+# Note: in 'ia', O'Brien county is labeled as 'Obrien'-- as is often the case,
+# special characters like apostraphes need special handling 
+ia |> dplyr::filter(substr(CountyName,1,1) == "O")
+# This is important - we will need to adjust our data later on to make things match.  
+
+# But first, let's create a test plot to make sure the map looks right. 
+par(mar = c(0,0,1,0))
+plot(ia[1], reset = FALSE) # reset = FALSE: we want to add to a plot with a legend
+```
+
+This sample map is the correct shape -- here, the 99 counties are colored according to their index (1-99). We want to make a map where the colors correspond to the number of patients representing each county. 
+
+
+Supposing one has access to electronic dental records, the data for such a study may look like this: 
+
+```{r}
+# read in CSV file that gives me county names
+key <- read.csv("data/ia_counties.csv") |> 
+  # narrow down to only IA (for sake of example)
+  dplyr::filter(State == "IA") |> 
+  # address the issue with the special character in O'Brien
+  dplyr::mutate(NAME = dplyr::if_else(NAME == "O'Brien", "Obrien", NAME))
+   
+# now simulate mock data for our example 
+# note: TD = teledentistry
+set.seed(52242) 
+td <- data.frame(
+  # creating data from 1000 pretend IDs
+  id = 1:1000,
+  # randomly choose a year for each ID
+  year = sample(2021:2023, 1000, replace = TRUE),
+  # randomly choose an outcome for each ID 
+  # (complete or incomplete, represented as 1 or 0)
+  complete = sample(0:1, 1000, replace = TRUE),
+  # randomly choose a county for each ID 
+  county = sample(key$NAME, 1000, replace = TRUE),
+  # randomly choose a model for each ID 
+  mode = sample(c("virtual", "in-person"), 1000, replace = TRUE)
+)
+
+# see what these data look like: 
+head(td) |>
+  # note the use of the 'kable()' function from the 'knitr' package below: 
+  # this is another great tool for making tables, when you want to see a 
+  # glimpse of the data
+  knitr::kable(caption = "Simulated data from electronic dental records")
+```
+
+Now, I am ready to create a map that will communicate to my collaborators where our patients are driving from to receive their treatment. 
+
+```{r}
+# determine how many patients in each county
+td_summarize <- td |>
+    group_by(county) |>
+    summarise(N = n()) |>
+  ungroup()
+
+# add fips codes (from GeoJSON file)
+td_summarize <- right_join(td_summarize, ia,
+            by = c("county" = "CountyName")) 
+
+# create sf object (for drawing a map)
+map <- td_summarize |> 
+  st_as_sf()
+
+# draw the map 
+ggplot() + 
+  geom_sf(data = map,
+          aes(fill = N)) + 
+  scale_fill_viridis() + 
+  labs(title = "Map of IA Residents by County", fill = "Number of \npatients") +
+  theme_bw() 
+
+```
