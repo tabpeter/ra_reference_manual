@@ -93,17 +93,15 @@ If you are on Windows, you will probably want to consider [installing Windows Su
 ## A few tips to get started
 As a first step in learning to work with the command line, try to find your files -- in the video below, I show how I do this with [symbolic links ('symlinks')](https://www.freecodecamp.org/news/linux-ln-how-to-create-a-symbolic-link-in-linux-example-bash-command/). 
 
-[Here](https://youtu.be/f-xsKZVWavo) is a quick video of me doing this. 
-
 More details on working with the command line are explained in the [online course](https://missing.csail.mit.edu/) called "The missing semester of your computer science (CS) education." This free online course was compiled by people at MIT. I have found this to be a really helpful place to begin. 
 
 ### Resources for learning the command line 
 
   - [ARStechnica: command line wizardry, part I](https://arstechnica.com/gadgets/2021/08/linux-bsd-command-line-101-using-awk-sed-and-grep-in-the-terminal/)
   
-   -[ARStechnica: command line wizardry, part II](https://arstechnica.com/gadgets/2021/09/command-line-wizardry-part-two-variables-and-loops-in-bash/)
+  - [ARStechnica: command line wizardry, part II](https://arstechnica.com/gadgets/2021/09/command-line-wizardry-part-two-variables-and-loops-in-bash/)
   
-  -[Linux Command line](http://linuxcommand.org/) -- official tutorial that starts from the ~very~ beginning 
+  - [Linux Command line](http://linuxcommand.org/) -- official tutorial that starts from the very beginning 
   
   - [Quick-start guide to the VIM text editor](https://eastmanreference.com/a-quick-start-guide-for-beginners-to-the-vim-text-editor) -- VIM is a popular choice for text editing (other kinds of text editors are TextEdit (ships with Mac), NotePad/NotePad ++ (Windows))
 

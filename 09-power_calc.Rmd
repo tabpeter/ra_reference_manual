@@ -76,4 +76,4 @@ The first method estimated that 3 observations would be needed in each group, wh
 
 ## SAS 
 
-Note that SAS offers the `PROC POWER` procedure for doing power and sample size calculations. I have often used both R and SAS functions for the same calculation and compared the results. Typically, SAS has much more in-depth documentation -- if you are wondering about the theoretical details for a calculation, SAS documentation is a helpful resource. 
+Note that SAS offers the `PROC POWER` procedure for doing power and sample size calculations. I have often used both `R` and SAS functions for the same calculation and compared the results. Typically, SAS has much more in-depth documentation -- if you are wondering about the theoretical details for a calculation, [SAS documentation](https://documentation.sas.com/doc/en/statug/15.2/statug_power_toc.htm) is a helpful resource. 

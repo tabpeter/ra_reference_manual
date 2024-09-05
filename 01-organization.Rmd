@@ -46,24 +46,19 @@ Here is a step-by-step example of how I use a file structure to organize myself 
   
   4. I go to my `TKP23-A-Endo` folder (which now has two things in it: a `.Rproj` file and a `README` file), and I make 4 subfolders: `data`, `scripts`, `reference`, and `reports`. These are the building blocks of my projects. 
   
-    - I will get data from Collaborator A, and it will go in the data folder. **Nothing else** will go in the data folder, and I will never change any of the original data files. In some cases (e.g., projects where you need to make subsets of data), I create a subfolder of 'data/' called 'original/', just to make sure I keep track of which files should never be edited.
+  - I will get data from Collaborator A, and it will go in the data folder. **Nothing else** will go in the data folder, and I will never change any of the original data files. In some cases (e.g., projects where you need to make subsets of data), I create a subfolder of 'data/' called 'original/', just to make sure I keep track of which files should never be edited.
     
-    - `scripts` will be the place where I put all of the code I use for data cleaning and analysis. 
+  - `scripts` will be the place where I put all of the code I use for data cleaning and analysis. 
     
-    - `reference` is where I will put things Collaborator A shares with me that help me understand the research question -- this could be articles in endodontics that provide an explanation of the terminology, or a PowerPoint that explains how the data are collected. I would also keep a copy of the [IRB](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/institutional-review-boards-frequently-asked-questions) documentation in this `reference` folder.
+  - `reference` is where I will put things Collaborator A shares with me that help me understand the research question -- this could be articles in endodontics that provide an explanation of the terminology, or a PowerPoint that explains how the data are collected. I would also keep a copy of the [IRB](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/institutional-review-boards-frequently-asked-questions) documentation in this `reference` folder.
     
-    - `reports` is where I will keep my final `.Rmd` file for writing the report which I will share with Collaborator A. 
+  - `reports` is where I will keep my final `.Rmd` file for writing the report which I will share with Collaborator A. 
     
 From here, I begin writing scripts. 
     
     
   5. As the project moves along, I may find that I need other subfolders. For instance, a `graphics` subfolder would be useful if I am making a ton of plots for a project. If I am writing a manuscript and there's quite a bit of back-and-forth with reviewers, I would use a `submission` subfolder that contains all my point-to-point responses (CROSS REF) for reviewers. 
   
-  
-### Folder setup video {#folder-video}  
-
-[Here's a short YouTube video](https://youtu.be/4UxoLIOmkzc) that gives an overview of my typical project folder setup.  
-
 ### Please use relative file paths 
 
 Computers work with files by having a 'pointer' at a specific folder, called a *directory*. Your computer probably has many directories on it -- for example, 'Desktop' and 'Downloads' are both directories you have by default in most operating systems. When you are doing project-based quantitative work, your scripts (the files with the code in them) will need to 'point' to data that is probably in another place. Instead of copying data into multiple folders, or using functions like `setwd()`, use *relative filepaths*. This can be accomplished using the `..` symbol to reference a *parent directory*. [Here is a short video](https://youtu.be/eb11iggmuwM) on how I use relative file paths. 

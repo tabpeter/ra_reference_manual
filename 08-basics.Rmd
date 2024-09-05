@@ -71,7 +71,4 @@ tbl_regression(my_model) |>
 
 For logistic regression, you will need to do some futher customization of the output to get the odds ratio estimates to appear in the table - take a look at [this help documentation](https://www.danieldsjoberg.com/gtsummary/articles/tbl_regression.html) for examples. 
 
-
-### Examples: 
-
-  - This article on [STHDA](http://www.sthda.com/english/articles/39-regression-model-diagnostics/161-linear-regression-assumptions-and-diagnostics-in-r-essentials/) gives some examples of residual plots in `R`. 
+For more on diagnostics/checking assumptions: this article on [STHDA](http://www.sthda.com/english/articles/39-regression-model-diagnostics/161-linear-regression-assumptions-and-diagnostics-in-r-essentials/) gives some examples of checking assumptions for linear regression in `R`. 

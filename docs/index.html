@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="context.html"/>
+<link rel="next" href="organization.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -76,140 +140,141 @@
 <li><a href="./">A Reference Guide for the Biostats GRA</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Motivation &amp; TLDR</a></li>
-<li class="chapter" data-level="2" data-path="context.html"><a href="context.html"><i class="fa fa-check"></i><b>2</b> Context</a></li>
-<li class="chapter" data-level="3" data-path="what-this-book-assumes.html"><a href="what-this-book-assumes.html"><i class="fa fa-check"></i><b>3</b> What this book assumes</a></li>
-<li class="chapter" data-level="4" data-path="acronymns.html"><a href="acronymns.html"><i class="fa fa-check"></i><b>4</b> Acronymns</a></li>
-<li class="chapter" data-level="5" data-path="working-with-the-garage-door-open.html"><a href="working-with-the-garage-door-open.html"><i class="fa fa-check"></i><b>5</b> Working with the garage door open</a></li>
-<li class="chapter" data-level="6" data-path="dedication.html"><a href="dedication.html"><i class="fa fa-check"></i><b>6</b> Dedication</a></li>
-<li class="chapter" data-level="7" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i><b>7</b> Getting organized: The first 3 days of a new RA job</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Motivation &amp; TLDR</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="organization.html"><a href="organization.html#file-structure"><i class="fa fa-check"></i><b>7.1</b> File structure</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="organization.html"><a href="organization.html#folder-video"><i class="fa fa-check"></i><b>7.1.1</b> Folder setup video</a></li>
-<li class="chapter" data-level="7.1.2" data-path="organization.html"><a href="organization.html#please-use-relative-file-paths"><i class="fa fa-check"></i><b>7.1.2</b> Please use relative file paths</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#context"><i class="fa fa-check"></i><b>1.1</b> Context</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-this-book-assumes"><i class="fa fa-check"></i><b>1.2</b> What this book assumes</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#acronymns"><i class="fa fa-check"></i><b>1.3</b> Acronymns</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#working-with-the-garage-door-open"><i class="fa fa-check"></i><b>1.4</b> Working with the garage door open</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i><b>1.5</b> Dedication</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="organization.html"><a href="organization.html#emails"><i class="fa fa-check"></i><b>7.2</b> Emails</a></li>
-<li class="chapter" data-level="7.3" data-path="organization.html"><a href="organization.html#project-notes"><i class="fa fa-check"></i><b>7.3</b> Project notes and README files</a>
+<li class="chapter" data-level="2" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i><b>2</b> Getting organized: The first 3 days of a new RA job</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="organization.html"><a href="organization.html#project-notes-1"><i class="fa fa-check"></i><b>7.3.1</b> Project notes</a></li>
-<li class="chapter" data-level="7.3.2" data-path="organization.html"><a href="organization.html#readme"><i class="fa fa-check"></i><b>7.3.2</b> README files</a></li>
+<li class="chapter" data-level="2.1" data-path="organization.html"><a href="organization.html#file-structure"><i class="fa fa-check"></i><b>2.1</b> File structure</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="organization.html"><a href="organization.html#please-use-relative-file-paths"><i class="fa fa-check"></i><b>2.1.1</b> Please use relative file paths</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="taking-notes.html"><a href="taking-notes.html"><i class="fa fa-check"></i><b>8</b> Taking Notes</a>
+<li class="chapter" data-level="2.2" data-path="organization.html"><a href="organization.html#emails"><i class="fa fa-check"></i><b>2.2</b> Emails</a></li>
+<li class="chapter" data-level="2.3" data-path="organization.html"><a href="organization.html#project-notes"><i class="fa fa-check"></i><b>2.3</b> Project notes and README files</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="taking-notes.html"><a href="taking-notes.html#zettelkasten"><i class="fa fa-check"></i><b>8.1</b> The Zettlekasten system</a></li>
-<li class="chapter" data-level="8.2" data-path="taking-notes.html"><a href="taking-notes.html#how-to-connect-your-notes"><i class="fa fa-check"></i><b>8.2</b> How to connect your notes</a></li>
-<li class="chapter" data-level="8.3" data-path="taking-notes.html"><a href="taking-notes.html#data-management"><i class="fa fa-check"></i><b>8.3</b> Data management</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="taking-notes.html"><a href="taking-notes.html#write-a-data-management-plan"><i class="fa fa-check"></i><b>8.3.1</b> Write a data management plan</a></li>
-<li class="chapter" data-level="8.3.2" data-path="taking-notes.html"><a href="taking-notes.html#specify-a-explicit-set-of-operating-procedures"><i class="fa fa-check"></i><b>8.3.2</b> Specify a explicit set of operating procedures</a></li>
-<li class="chapter" data-level="8.3.3" data-path="taking-notes.html"><a href="taking-notes.html#create-a-data-dictionary"><i class="fa fa-check"></i><b>8.3.3</b> Create a data dictionary</a></li>
-<li class="chapter" data-level="8.3.4" data-path="taking-notes.html"><a href="taking-notes.html#determine-a-data-storage-location"><i class="fa fa-check"></i><b>8.3.4</b> Determine a data storage location</a></li>
-<li class="chapter" data-level="8.3.5" data-path="taking-notes.html"><a href="taking-notes.html#develop-an-analysis-plan"><i class="fa fa-check"></i><b>8.3.5</b> Develop an analysis plan</a></li>
-<li class="chapter" data-level="8.3.6" data-path="taking-notes.html"><a href="taking-notes.html#archive-all-of-your-procedures"><i class="fa fa-check"></i><b>8.3.6</b> Archive all of your procedures</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="taking-notes.html"><a href="taking-notes.html#u.-iowa-data-sharing-policy"><i class="fa fa-check"></i><b>8.4</b> U. Iowa data sharing policy</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html"><i class="fa fa-check"></i><b>9</b> Cultivating professionalism</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#communication"><i class="fa fa-check"></i><b>9.1</b> Communication</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#speaking-in-the-affirmative"><i class="fa fa-check"></i><b>9.1.1</b> Speaking in the affirmative</a></li>
-<li class="chapter" data-level="9.1.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#responding-to-emails"><i class="fa fa-check"></i><b>9.1.2</b> Responding to emails</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#handling-disagreement"><i class="fa fa-check"></i><b>9.2</b> Handling disagreement</a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-data-is-not-organized-in-a-way-that-is-conducive-to-analysis"><i class="fa fa-check"></i><b>9.2.1</b> The data is not organized in a way that is conducive to analysis</a></li>
-<li class="chapter" data-level="9.2.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-data-accidentally-contain-hippa-protected-information"><i class="fa fa-check"></i><b>9.2.2</b> The data accidentally contain HIPPA protected information</a></li>
-<li class="chapter" data-level="9.2.3" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-pi-is-insistent-on-presenting-results-in-a-way-that-i-believe-is-sub-optimal"><i class="fa fa-check"></i><b>9.2.3</b> The PI is insistent on presenting results in a way that I believe is sub-optimal</a></li>
-<li class="chapter" data-level="9.2.4" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#i-realized-i-made-a-mistake-in-my-code"><i class="fa fa-check"></i><b>9.2.4</b> I realized I made a mistake in my code!</a></li>
-<li class="chapter" data-level="9.2.5" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#collaborating-with-other-studentstrainees"><i class="fa fa-check"></i><b>9.2.5</b> Collaborating with other students/trainees</a></li>
-<li class="chapter" data-level="9.2.6" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#handling-inappropriaterude-emails-from-a-faculty-member"><i class="fa fa-check"></i><b>9.2.6</b> Handling inappropriate/rude emails from a faculty member</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#maintaining-a-cv"><i class="fa fa-check"></i><b>9.3</b> Maintaining a CV</a></li>
-<li class="chapter" data-level="9.4" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#point-to-point"><i class="fa fa-check"></i><b>9.4</b> Responding to reviewers</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="your-computing-setup.html"><a href="your-computing-setup.html"><i class="fa fa-check"></i><b>10</b> Your computing setup</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-r-and-rstudio-now-posit"><i class="fa fa-check"></i><b>10.1</b> Setting up R and RStudio (now Posit)</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#download-and-install-r"><i class="fa fa-check"></i><b>10.1.1</b> Download and install R</a></li>
-<li class="chapter" data-level="10.1.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#download-and-install-rstudio"><i class="fa fa-check"></i><b>10.1.2</b> Download and install RStudio</a></li>
-<li class="chapter" data-level="10.1.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#customize-rstudio"><i class="fa fa-check"></i><b>10.1.3</b> Customize RStudio</a></li>
-<li class="chapter" data-level="10.1.4" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-your-r-library"><i class="fa fa-check"></i><b>10.1.4</b> Setting up your R library</a></li>
-<li class="chapter" data-level="10.1.5" data-path="your-computing-setup.html"><a href="your-computing-setup.html#tips-things-you-should-never-do-in-rrstudio"><i class="fa fa-check"></i><b>10.1.5</b> Tips: things you should never do in R/RStudio</a></li>
-<li class="chapter" data-level="10.1.6" data-path="your-computing-setup.html"><a href="your-computing-setup.html#cool-keyboard-shortcuts-in-rrstudio"><i class="fa fa-check"></i><b>10.1.6</b> Cool keyboard shortcuts in R/RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-your-terminal-i.e.-the-command-line"><i class="fa fa-check"></i><b>10.2</b> Setting up your terminal (i.e., the command line)</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#resources-for-learning-the-command-line"><i class="fa fa-check"></i><b>10.2.1</b> Resources for learning the command line</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#getting-started-with-git"><i class="fa fa-check"></i><b>10.3</b> Getting started with Git</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#resources-for-learning-git"><i class="fa fa-check"></i><b>10.3.1</b> Resources for learning Git</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="your-computing-setup.html"><a href="your-computing-setup.html#using-high-performance-computing-clusters"><i class="fa fa-check"></i><b>10.4</b> Using high performance computing clusters</a>
-<ul>
-<li class="chapter" data-level="10.4.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#interactive-sessions-v.-submitting-jobs"><i class="fa fa-check"></i><b>10.4.1</b> Interactive sessions v. submitting jobs</a></li>
-<li class="chapter" data-level="10.4.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#writing-your-first-bash-script"><i class="fa fa-check"></i><b>10.4.2</b> Writing your first bash script</a></li>
-<li class="chapter" data-level="10.4.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#conda-environments-v.-module-configurations"><i class="fa fa-check"></i><b>10.4.3</b> Conda environments v. module configurations</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="your-computing-setup.html"><a href="your-computing-setup.html#advanced-r-and-some-julia"><i class="fa fa-check"></i><b>10.5</b> Advanced R and some Julia</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="writing-reports.html"><a href="writing-reports.html"><i class="fa fa-check"></i><b>11</b> Writing reports</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="writing-reports.html"><a href="writing-reports.html#what-makes-a-report-good"><i class="fa fa-check"></i><b>11.1</b> What makes a report ‘good’?</a></li>
-<li class="chapter" data-level="11.2" data-path="writing-reports.html"><a href="writing-reports.html#tables"><i class="fa fa-check"></i><b>11.2</b> Tools for writing reports</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="giving-presentations.html"><a href="giving-presentations.html"><i class="fa fa-check"></i><b>12</b> Giving presentations</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="giving-presentations.html"><a href="giving-presentations.html#tools-for-giving-presentations"><i class="fa fa-check"></i><b>12.1</b> Tools for giving presentations</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html"><i class="fa fa-check"></i><b>13</b> The basics: t-tests, ANOVA, and linear regression</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#t-tests-anova"><i class="fa fa-check"></i><b>13.1</b> t-tests &amp; ANOVA</a>
-<ul>
-<li class="chapter" data-level="13.1.1" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#assumptionsdiagnostics"><i class="fa fa-check"></i><b>13.1.1</b> Assumptions/diagnostics</a></li>
-<li class="chapter" data-level="13.1.2" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#examples"><i class="fa fa-check"></i><b>13.1.2</b> Examples:</a></li>
-<li class="chapter" data-level="13.1.3" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#r-code-tips"><i class="fa fa-check"></i><b>13.1.3</b> R code tips</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#linear-regression"><i class="fa fa-check"></i><b>13.2</b> Linear regression</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#assumptionsdiagnostics-1"><i class="fa fa-check"></i><b>13.2.1</b> Assumptions/diagnostics</a></li>
-<li class="chapter" data-level="13.2.2" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#examples-1"><i class="fa fa-check"></i><b>13.2.2</b> Examples:</a></li>
-<li class="chapter" data-level="13.2.3" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#r-code-tips-1"><i class="fa fa-check"></i><b>13.2.3</b> R code tips</a></li>
+<li class="chapter" data-level="2.3.1" data-path="organization.html"><a href="organization.html#project-notes-1"><i class="fa fa-check"></i><b>2.3.1</b> Project notes</a></li>
+<li class="chapter" data-level="2.3.2" data-path="organization.html"><a href="organization.html#readme"><i class="fa fa-check"></i><b>2.3.2</b> README files</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="power-and-sample-size-calculations.html"><a href="power-and-sample-size-calculations.html"><i class="fa fa-check"></i><b>14</b> Power and sample size calculations</a>
+<li class="chapter" data-level="3" data-path="taking-notes.html"><a href="taking-notes.html"><i class="fa fa-check"></i><b>3</b> Taking Notes</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="power-and-sample-size-calculations.html"><a href="power-and-sample-size-calculations.html#sas"><i class="fa fa-check"></i><b>14.1</b> SAS</a></li>
+<li class="chapter" data-level="3.1" data-path="taking-notes.html"><a href="taking-notes.html#zettelkasten"><i class="fa fa-check"></i><b>3.1</b> The Zettlekasten system</a></li>
+<li class="chapter" data-level="3.2" data-path="taking-notes.html"><a href="taking-notes.html#how-to-connect-your-notes"><i class="fa fa-check"></i><b>3.2</b> How to connect your notes</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html"><i class="fa fa-check"></i><b>15</b> Survival (time-to-event) analysis</a>
+<li class="chapter" data-level="4" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>4</b> Data management</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#quick-examples"><i class="fa fa-check"></i><b>15.1</b> Quick examples</a></li>
-<li class="chapter" data-level="15.2" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#r-code-tips-2"><i class="fa fa-check"></i><b>15.2</b> R code tips</a></li>
-<li class="chapter" data-level="15.3" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#references"><i class="fa fa-check"></i><b>15.3</b> References</a></li>
+<li class="chapter" data-level="4.0.1" data-path="data-management.html"><a href="data-management.html#write-a-data-management-plan"><i class="fa fa-check"></i><b>4.0.1</b> Write a data management plan</a></li>
+<li class="chapter" data-level="4.0.2" data-path="data-management.html"><a href="data-management.html#specify-a-explicit-set-of-operating-procedures"><i class="fa fa-check"></i><b>4.0.2</b> Specify a explicit set of operating procedures</a></li>
+<li class="chapter" data-level="4.0.3" data-path="data-management.html"><a href="data-management.html#create-a-data-dictionary"><i class="fa fa-check"></i><b>4.0.3</b> Create a data dictionary</a></li>
+<li class="chapter" data-level="4.0.4" data-path="data-management.html"><a href="data-management.html#determine-a-data-storage-location"><i class="fa fa-check"></i><b>4.0.4</b> Determine a data storage location</a></li>
+<li class="chapter" data-level="4.0.5" data-path="data-management.html"><a href="data-management.html#develop-an-analysis-plan"><i class="fa fa-check"></i><b>4.0.5</b> Develop an analysis plan</a></li>
+<li class="chapter" data-level="4.0.6" data-path="data-management.html"><a href="data-management.html#archive-all-of-your-procedures"><i class="fa fa-check"></i><b>4.0.6</b> Archive all of your procedures</a></li>
+<li class="chapter" data-level="4.1" data-path="data-management.html"><a href="data-management.html#u.-iowa-data-sharing-policy"><i class="fa fa-check"></i><b>4.1</b> U. Iowa data sharing policy</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="survey-data-analysis.html"><a href="survey-data-analysis.html"><i class="fa fa-check"></i><b>16</b> Survey data analysis</a>
+<li class="chapter" data-level="5" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html"><i class="fa fa-check"></i><b>5</b> Cultivating professionalism</a>
 <ul>
-<li class="chapter" data-level="16.1" data-path="survey-data-analysis.html"><a href="survey-data-analysis.html#tools-for-analyzing-survey-data"><i class="fa fa-check"></i><b>16.1</b> Tools for analyzing survey data</a></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="longitudinal-data-analysis.html"><a href="longitudinal-data-analysis.html"><i class="fa fa-check"></i><b>17</b> Longitudinal data analysis</a>
+<li class="chapter" data-level="5.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#communication"><i class="fa fa-check"></i><b>5.1</b> Communication</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="longitudinal-data-analysis.html"><a href="longitudinal-data-analysis.html#tools-for-longitudinal-data-analysis"><i class="fa fa-check"></i><b>17.1</b> Tools for longitudinal data analysis</a></li>
+<li class="chapter" data-level="5.1.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#speaking-in-the-affirmative"><i class="fa fa-check"></i><b>5.1.1</b> Speaking in the affirmative</a></li>
+<li class="chapter" data-level="5.1.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#responding-to-emails"><i class="fa fa-check"></i><b>5.1.2</b> Responding to emails</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="microbiome-data-analysis.html"><a href="microbiome-data-analysis.html"><i class="fa fa-check"></i><b>18</b> Microbiome data analysis</a>
+<li class="chapter" data-level="5.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#handling-disagreement"><i class="fa fa-check"></i><b>5.2</b> Handling disagreement</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="microbiome-data-analysis.html"><a href="microbiome-data-analysis.html#tools-for-working-with-microbiome-data"><i class="fa fa-check"></i><b>18.1</b> Tools for working with microbiome data</a></li>
+<li class="chapter" data-level="5.2.1" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-data-is-not-organized-in-a-way-that-is-conducive-to-analysis"><i class="fa fa-check"></i><b>5.2.1</b> The data is not organized in a way that is conducive to analysis</a></li>
+<li class="chapter" data-level="5.2.2" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-data-accidentally-contain-hippa-protected-information"><i class="fa fa-check"></i><b>5.2.2</b> The data accidentally contain HIPPA protected information</a></li>
+<li class="chapter" data-level="5.2.3" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#the-pi-is-insistent-on-presenting-results-in-a-way-that-i-believe-is-sub-optimal"><i class="fa fa-check"></i><b>5.2.3</b> The PI is insistent on presenting results in a way that I believe is sub-optimal</a></li>
+<li class="chapter" data-level="5.2.4" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#i-realized-i-made-a-mistake-in-my-code"><i class="fa fa-check"></i><b>5.2.4</b> I realized I made a mistake in my code!</a></li>
+<li class="chapter" data-level="5.2.5" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#collaborating-with-other-studentstrainees"><i class="fa fa-check"></i><b>5.2.5</b> Collaborating with other students/trainees</a></li>
+<li class="chapter" data-level="5.2.6" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#handling-inappropriaterude-emails-from-a-faculty-member"><i class="fa fa-check"></i><b>5.2.6</b> Handling inappropriate/rude emails from a faculty member</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="genetics-gwas-data-analysis.html"><a href="genetics-gwas-data-analysis.html"><i class="fa fa-check"></i><b>19</b> Genetics (GWAS) data analysis</a>
+<li class="chapter" data-level="5.3" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#maintaining-a-cv"><i class="fa fa-check"></i><b>5.3</b> Maintaining a CV</a></li>
+<li class="chapter" data-level="5.4" data-path="cultivating-professionalism.html"><a href="cultivating-professionalism.html#point-to-point"><i class="fa fa-check"></i><b>5.4</b> Responding to reviewers</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="your-computing-setup.html"><a href="your-computing-setup.html"><i class="fa fa-check"></i><b>6</b> Your computing setup</a>
 <ul>
-<li class="chapter" data-level="19.1" data-path="genetics-gwas-data-analysis.html"><a href="genetics-gwas-data-analysis.html#r-packages"><i class="fa fa-check"></i><b>19.1</b> R packages</a></li>
-<li class="chapter" data-level="19.2" data-path="genetics-gwas-data-analysis.html"><a href="genetics-gwas-data-analysis.html#command-line-tools"><i class="fa fa-check"></i><b>19.2</b> Command-line tools</a></li>
+<li class="chapter" data-level="6.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-r-and-rstudio-now-posit"><i class="fa fa-check"></i><b>6.1</b> Setting up R and RStudio (now Posit)</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#download-and-install-r"><i class="fa fa-check"></i><b>6.1.1</b> Download and install R</a></li>
+<li class="chapter" data-level="6.1.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#download-and-install-rstudio"><i class="fa fa-check"></i><b>6.1.2</b> Download and install RStudio</a></li>
+<li class="chapter" data-level="6.1.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#customize-rstudio"><i class="fa fa-check"></i><b>6.1.3</b> Customize RStudio</a></li>
+<li class="chapter" data-level="6.1.4" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-your-r-library"><i class="fa fa-check"></i><b>6.1.4</b> Setting up your R library</a></li>
+<li class="chapter" data-level="6.1.5" data-path="your-computing-setup.html"><a href="your-computing-setup.html#tips-things-you-should-never-do-in-rrstudio"><i class="fa fa-check"></i><b>6.1.5</b> Tips: things you should never do in R/RStudio</a></li>
+<li class="chapter" data-level="6.1.6" data-path="your-computing-setup.html"><a href="your-computing-setup.html#cool-keyboard-shortcuts-in-rrstudio"><i class="fa fa-check"></i><b>6.1.6</b> Cool keyboard shortcuts in R/RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="geographic-gis-data-analysis.html"><a href="geographic-gis-data-analysis.html"><i class="fa fa-check"></i><b>20</b> Geographic (GIS) data analysis</a></li>
-<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="6.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#setting-up-your-terminal-i.e.-the-command-line"><i class="fa fa-check"></i><b>6.2</b> Setting up your terminal (i.e., the command line)</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#mac"><i class="fa fa-check"></i><b>6.2.1</b> Mac</a></li>
+<li class="chapter" data-level="6.2.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#linux-ubuntu-debian-etc."><i class="fa fa-check"></i><b>6.2.2</b> Linux (Ubuntu, Debian, etc.)</a></li>
+<li class="chapter" data-level="6.2.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#windows"><i class="fa fa-check"></i><b>6.2.3</b> Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#a-few-tips-to-get-started"><i class="fa fa-check"></i><b>6.3</b> A few tips to get started</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#resources-for-learning-the-command-line"><i class="fa fa-check"></i><b>6.3.1</b> Resources for learning the command line</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="your-computing-setup.html"><a href="your-computing-setup.html#getting-started-with-git"><i class="fa fa-check"></i><b>6.4</b> Getting started with Git</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#resources-for-learning-git"><i class="fa fa-check"></i><b>6.4.1</b> Resources for learning Git</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="your-computing-setup.html"><a href="your-computing-setup.html#using-high-performance-computing-clusters"><i class="fa fa-check"></i><b>6.5</b> Using high performance computing clusters</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="your-computing-setup.html"><a href="your-computing-setup.html#interactive-sessions-v.-submitting-jobs"><i class="fa fa-check"></i><b>6.5.1</b> Interactive sessions v. submitting jobs</a></li>
+<li class="chapter" data-level="6.5.2" data-path="your-computing-setup.html"><a href="your-computing-setup.html#writing-your-first-bash-script"><i class="fa fa-check"></i><b>6.5.2</b> Writing your first bash script</a></li>
+<li class="chapter" data-level="6.5.3" data-path="your-computing-setup.html"><a href="your-computing-setup.html#conda-environments-module-configurations-and-containers"><i class="fa fa-check"></i><b>6.5.3</b> Conda environments, module configurations, and containers</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="your-computing-setup.html"><a href="your-computing-setup.html#advanced-r-and-some-julia"><i class="fa fa-check"></i><b>6.6</b> Advanced R and some Julia</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="writing-reports.html"><a href="writing-reports.html"><i class="fa fa-check"></i><b>7</b> Writing reports</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="writing-reports.html"><a href="writing-reports.html#what-makes-a-report-good"><i class="fa fa-check"></i><b>7.1</b> What makes a report ‘good’?</a></li>
+<li class="chapter" data-level="7.2" data-path="writing-reports.html"><a href="writing-reports.html#outline-of-a-report"><i class="fa fa-check"></i><b>7.2</b> Outline of a report</a></li>
+<li class="chapter" data-level="7.3" data-path="writing-reports.html"><a href="writing-reports.html#tables"><i class="fa fa-check"></i><b>7.3</b> Tools for writing reports</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="giving-presentations.html"><a href="giving-presentations.html"><i class="fa fa-check"></i><b>8</b> Giving presentations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="giving-presentations.html"><a href="giving-presentations.html#tips-and-ideas"><i class="fa fa-check"></i><b>8.1</b> Tips and ideas</a></li>
+<li class="chapter" data-level="8.2" data-path="giving-presentations.html"><a href="giving-presentations.html#tools-for-giving-presentations"><i class="fa fa-check"></i><b>8.2</b> Tools for giving presentations</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html"><i class="fa fa-check"></i><b>9</b> The basics: t-tests, ANOVA, and linear regression</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#t-tests-anova"><i class="fa fa-check"></i><b>9.1</b> t-tests &amp; ANOVA</a></li>
+<li class="chapter" data-level="9.2" data-path="the-basics-t-tests-anova-and-linear-regression.html"><a href="the-basics-t-tests-anova-and-linear-regression.html#linear-regression"><i class="fa fa-check"></i><b>9.2</b> Linear regression</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="power-and-sample-size-calculations.html"><a href="power-and-sample-size-calculations.html"><i class="fa fa-check"></i><b>10</b> Power and sample size calculations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="power-and-sample-size-calculations.html"><a href="power-and-sample-size-calculations.html#sas"><i class="fa fa-check"></i><b>10.1</b> SAS</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html"><i class="fa fa-check"></i><b>11</b> Survival (time-to-event) analysis</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#quick-examples"><i class="fa fa-check"></i><b>11.1</b> Quick examples</a></li>
+<li class="chapter" data-level="11.2" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#r-code-tips"><i class="fa fa-check"></i><b>11.2</b> R code tips</a></li>
+<li class="chapter" data-level="11.3" data-path="survival-time-to-event-analysis.html"><a href="survival-time-to-event-analysis.html#references"><i class="fa fa-check"></i><b>11.3</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="survey-data-analysis.html"><a href="survey-data-analysis.html"><i class="fa fa-check"></i><b>12</b> Survey data analysis</a></li>
+<li class="chapter" data-level="13" data-path="longitudinal-data-analysis.html"><a href="longitudinal-data-analysis.html"><i class="fa fa-check"></i><b>13</b> Longitudinal data analysis</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="longitudinal-data-analysis.html"><a href="longitudinal-data-analysis.html#tools-for-longitudinal-data-analysis"><i class="fa fa-check"></i><b>13.1</b> Tools for longitudinal data analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="microbiome-data-analysis.html"><a href="microbiome-data-analysis.html"><i class="fa fa-check"></i><b>14</b> Microbiome data analysis</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="microbiome-data-analysis.html"><a href="microbiome-data-analysis.html#tools-for-working-with-microbiome-data"><i class="fa fa-check"></i><b>14.1</b> Tools for working with microbiome data</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html"><i class="fa fa-check"></i><b>15</b> Genome-wide association (GWAS) data</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#r-packages"><i class="fa fa-check"></i><b>15.1</b> <code>R</code> packages</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#for-analyzing-one-genetic-marker-at-a-time"><i class="fa fa-check"></i><b>15.1.1</b> for analyzing one genetic marker at a time</a></li>
+<li class="chapter" data-level="15.1.2" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#for-analyzing-markers-together-in-an-additive-model"><i class="fa fa-check"></i><b>15.1.2</b> for analyzing markers together in an additive model</a></li>
+<li class="chapter" data-level="15.1.3" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#for-summary-level-gwas-data"><i class="fa fa-check"></i><b>15.1.3</b> for summary-level GWAS data</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#bioconductor"><i class="fa fa-check"></i><b>15.2</b> Bioconductor</a></li>
+<li class="chapter" data-level="15.3" data-path="genome-wide-association-gwas-data.html"><a href="genome-wide-association-gwas-data.html#command-line-tools"><i class="fa fa-check"></i><b>15.3</b> Command-line tools</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="geographic-gis-data-analysis.html"><a href="geographic-gis-data-analysis.html"><i class="fa fa-check"></i><b>16</b> Geographic (GIS) data analysis</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -242,6 +307,45 @@
 This work is a reference manual, which means most of its contents are not new. Rather, the novelty in what I am providing here is in its form and organization. During the last couple of years of my PhD program, I set out to gather resources together to help the newer GRAs on my team, with the goal of helping them by sharing the links, lectures, and tips that have helped me the most. What I am publishing here is the result of that work. Although this reference manual is intended to serve graduate students and early career professionals in biostatistics, some of those working in the fields of statistics, data science, and bioinformatics may also find this manual relevant to their work.</p>
 <p>The objective of this manual is twofold: to provide starting points from which to address common questions of practice, and to summarize the references and tools which I have found most helpful in my journey through gradate school and my early years as a biostatistician. Overarching these two goals is a desire to make a contribution toward training biostatisticians whose work is professional, accessible, rigorous, and reproducible.</p>
 <p>If even one other person is encouraged and sharpened by this work, my goal will be accomplished.</p>
+<div id="context" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Context<a href="index.html#context" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The meta-question behind this short book is ‘where to begin?’. I started graduate school in August of 2019, coming straight from an undergrad math program <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> to a doctoral program in biostatistics. In the same week that I started classes, I started my work as a graduate research assistant (GRA) in the <a href="https://dentistry.uiowa.edu/research/biostatistics-and-computational-biology">Division of Biostatistics and Computational Biology</a> at the University of Iowa College of Dentistry. It was a steep learning curve. Now heading into my 6th year as a Ph.D. student, I began compiling some notes/tips to share with the other GRA’s who joined our team after me. Those notes have become this reference manual.</p>
+<p>When you are starting off as a GRA in a new field, you need to know what to Google. Yes, a significant component of graduate level study is learning how to learn. You need to struggle with hard concepts and new ideas – the learning is truly in the struggle. At the same time, however, you need to know where to start. This creates a tension: new GRAs need to engage in independent study work, but they also need resources that teach them some first principles to guide their search. If you don’t know what your searching for, you won’t know if you’ve found it. Moreover, if you are a novice who <em>thinks</em> you know what you are searching for, you could easily come across bad advice (by ‘bad’, I mean that which leads to suboptimal outcomes with respect to rigor and reproducibility).</p>
+<p>With this tension in mind, the goal of this reference manual is to (1) outline some of the main ideas that you will need to be successful, and (2) to provide you with some vocabulary to help you as you learn independently. Many of the chapters here outline some general concepts and then provide links to further reading.</p>
+</div>
+<div id="what-this-book-assumes" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> What this book assumes<a href="index.html#what-this-book-assumes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is a reference manual, not a textbook. As such, my philosophy in writing this is to summarize the most helpful things I have learned in a way that is conducive to quick review. The chapters that are titled after broad areas of research (e.g., ‘survival analysis’) contain more links than new content. I assume throughout this writing that the readers are either familiar with foundational statistical concepts or are currently in courses that are teaching those concepts.</p>
+</div>
+<div id="acronymns" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Acronymns<a href="index.html#acronymns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Throughout this work, I use the following acronyms:</p>
+<ul>
+<li><strong>GRA</strong>: Graduate research assistant</li>
+<li><strong>PI</strong>: Primary investigator</li>
+<li><strong>CC</strong>: Carbon copy (as in an email)</li>
+<li><strong>UI</strong>: University of Iowa</li>
+<li><strong>HPC</strong>: High performance computing</li>
+<li><strong>SAS</strong>: <a href="https://en.wikipedia.org/wiki/SAS_(software)">Statistical Analysis System</a> software</li>
+<li><strong>GWAS</strong>: Genome-wide association study</li>
+</ul>
+</div>
+<div id="working-with-the-garage-door-open" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Working with the garage door open<a href="index.html#working-with-the-garage-door-open" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This manual is not comprehensive, and it is a work in progress. I am writing this as I work my way through my own program, making notes as I go. This is in the spirit of <a href="https://notes.andymatuschak.org/About_these_notes?stackedNotes=z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu">working with the garage door open</a>, an approach to learning that really resonates with me.</p>
+<p>If you think of a reference that you’d like to see included, open a GitHub issue or make a pull request to let me know.</p>
+</div>
+<div id="dedication" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Dedication<a href="index.html#dedication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This work is dedicated in memory of my father, <a href="https://www.hendersonvillefh.com/obituary/William-Peter">Bill Peter</a> (1955-2022).</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>I got a B.S. in math from Wheaton College, IL<a href="index.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -249,7 +353,7 @@ This work is a reference manual, which means most of its contents are not new. R
         </div>
       </div>
 
-<a href="context.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="organization.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

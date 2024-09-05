@@ -1,4 +1,4 @@
-## Data management {#data-management}
+# Data management {#data-management}
 
 Closely related to organization is data management. Many graduate research assistants have data management responsibilities in addition to data analysis. [Oracle](https://www.oracle.com/database/what-is-data-management/) defines data management as the "...practice of collecting, keeping, and using data securely, efficiently, and cost-effectively." Based on [these notes from the University of Mass.](https://people.umass.edu/biostat690c/pdf/1.%20%20Principles%20of%20Data%20Management%202020.pdf), here are the general components of data management: 
 
