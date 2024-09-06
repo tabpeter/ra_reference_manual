@@ -50,7 +50,7 @@ linux-ubuntu-debian-etc.
 windows
 a-few-tips-to-get-started
 resources-for-learning-the-command-line
-getting-started-with-git
+git
 resources-for-learning-git
 using-high-performance-computing-clusters
 interactive-sessions-v.-submitting-jobs

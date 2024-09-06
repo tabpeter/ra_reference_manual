@@ -106,7 +106,7 @@ More details on working with the command line are explained in the [online cours
   - [Quick-start guide to the VIM text editor](https://eastmanreference.com/a-quick-start-guide-for-beginners-to-the-vim-text-editor) -- VIM is a popular choice for text editing (other kinds of text editors are TextEdit (ships with Mac), NotePad/NotePad ++ (Windows))
 
 
-## Getting started with Git
+## Getting started with Git {#git}
 
 [Git](https://git-scm.com/) is a free and open source command-line tool for [version control](https://en.wikipedia.org/wiki/Version_control). What this means is that Git allows you to avoid the problems that arise when you try to work with multiple copies of code for a project. Have you ever had a folder with files like this: `analysis1.R`, `04-05-2023_analysis.R`, `old_analysis.R`, `final_version.R`, and `final_final_version.R`?  This way of working is not only inefficient, but also inhibits collaboration and makes your work harder to reproduce. None of that is good for science. So, Git offers a way to manage versions, so that you can keep track of the current version of your code and have access to looking back at older versions.
 

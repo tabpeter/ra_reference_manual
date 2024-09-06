@@ -40,7 +40,7 @@ Here are some tricky situations that may arise when working in a GRA position, a
 
 ### The data is not organized in a way that is conducive to analysis 
 
-If you've received data from folks with whom you did not consult before data collection, you may find that the data are 'messy' - maybe there are lots of notes in one column, or the data you want is in the column names, or the values within columns are not consistent. There are several resources to help you with [processing data in R](https://www.geeksforgeeks.org/processing-of-raw-data-to-tidy-data-in-r/) and/or [cleaning data in R](https://www.geeksforgeeks.org/data-cleaning-in-r/). The packages in the [tidyverse](https://www.tidyverse.org/packages/) have been super helpful to me for these tasks. I **highly recommend** that you write functions for your data cleaning/data processing scripts. [CROSS REF]
+If you've received data from folks with whom you did not consult before data collection, you may find that the data are 'messy' - maybe there are lots of notes in one column, or the data you want is in the column names, or the values within columns are not consistent. There are several resources to help you with [processing data in R](https://www.geeksforgeeks.org/processing-of-raw-data-to-tidy-data-in-r/) and/or [cleaning data in R](https://www.geeksforgeeks.org/data-cleaning-in-r/). The packages in the [tidyverse](https://www.tidyverse.org/packages/) have been super helpful to me for these tasks. I **highly recommend** that you write functions for your data cleaning/data processing scripts.
 
 Before you dig into the computing, though, two more important questions are: 
 

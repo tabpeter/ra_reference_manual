@@ -16,7 +16,7 @@ I will outline here both general principles and some specific strategies that ha
 
 1. One master folder per project 
 
-  - the 'master folder' structure translates well to starting GitHub repositories [CROSS REF]. 
+  - the 'master folder' structure translates well to starting [GitHub repositories](#git). 
 
 2. Subfolders for each file type 
 
@@ -36,7 +36,7 @@ I will outline here both general principles and some specific strategies that ha
 
 4. Example 
 
-Here is a step-by-step example of how I use a file structure to organize myself at the start of a new project (if you'd prefer, [skip to the video](#folder-video)). Suppose I am contacted by Collaborator A for support on a study of a new endodontic treatment...
+Here is a step-by-step example of how I use a file structure to organize myself at the start of a new project. Suppose I am contacted by Collaborator A for support on a study of a new endodontic treatment...
 
   1. I begin by creating a new folder with a name that fits my established convention. For my new project, I would create a folder `TKP23-A-Endo`. My folders are stored in a shared drive to which other biostatistician have access, so I begin my folder names with my initials (TKP). the '23' tells me that the project started in 2023. The 'A' and 'Endo' keywords tell me who is the PI/what project it is (this is helpful since it is not uncommon for me to have multiple projects from the same lab). 
   
@@ -57,7 +57,7 @@ Here is a step-by-step example of how I use a file structure to organize myself 
 From here, I begin writing scripts. 
     
     
-  5. As the project moves along, I may find that I need other subfolders. For instance, a `graphics` subfolder would be useful if I am making a ton of plots for a project. If I am writing a manuscript and there's quite a bit of back-and-forth with reviewers, I would use a `submission` subfolder that contains all my point-to-point responses (CROSS REF) for reviewers. 
+  5. As the project moves along, I may find that I need other subfolders. For instance, a `graphics` subfolder would be useful if I am making a ton of plots for a project. If I am writing a manuscript and there's quite a bit of back-and-forth with reviewers, I would use a `submission` subfolder that contains all my [point-to-point responses](#point-to-point) for reviewers. 
   
 ### Please use relative file paths 
 
