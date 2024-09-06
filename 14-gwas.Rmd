@@ -4,6 +4,10 @@ New tools for genetic/genomic data analysis are being created at a mind-boggling
 
 A tutorial for GWAS in `R` is available [here](https://pbreheny.github.io/adv-gwas-tutorial/). 
 
+## Principal component analysis (PCA)
+
+One concept that comes up often in GWAS data is principal components -- [this](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues) CrossValidated post is the best explanation I have read on PCA. Another site that may be helpful is [this one](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-princomp/), which has examples of visualizing PCA in `R`. 
+
 ## `R` packages 
 
 ### for analyzing one genetic marker at a time 
@@ -22,7 +26,7 @@ A tutorial for GWAS in `R` is available [here](https://pbreheny.github.io/adv-gw
   
   - [PLACO](https://github.com/RayDebashree/PLACO): this isn't a 'package' per se, but this method for assessing pleiotropy between traits is implemented in `R`.
 
-## Bioconductor 
+## Bioconductor packages 
 
   - [snpStats](https://www.bioconductor.org/packages/release/bioc/html/snpStats.html)
 

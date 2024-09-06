@@ -1,4 +1,4 @@
-tab:unnamed-chunk-14
+tab:unnamed-chunk-10
 motivation-tldr
 context
 what-this-book-assumes
@@ -68,7 +68,6 @@ the-basics-t-tests-anova-and-linear-regression
 t-tests-anova
 linear-regression
 power-and-sample-size-calculations
-sas
 survival-time-to-event-analysis
 quick-examples
 r-code-tips
@@ -79,10 +78,11 @@ tools-for-longitudinal-data-analysis
 microbiome-data-analysis
 tools-for-working-with-microbiome-data
 genome-wide-association-gwas-data
+principal-component-analysis-pca
 r-packages
 for-analyzing-one-genetic-marker-at-a-time
 for-analyzing-markers-together-in-an-additive-model
 for-summary-level-gwas-data
-bioconductor
+bioconductor-packages
 command-line-tools
 geographic-gis-data-analysis
